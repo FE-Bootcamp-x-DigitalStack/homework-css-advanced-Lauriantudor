@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Tudor Laurian</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <a href="#main-content" class="skip-link">Sari la conținut</a>
+      <nav class="navbar" aria-label="Navigare principală">
+        <div class="logo">
+          <img
+            src="asests/images/logo-blog.jpg"
+            alt="Home page"
+            width="50"
+            height="50"
+          />
+        </div>
+        <ul class="nav-links">
+          <li><a href="#about-me">Despre mine</a></li>
+          <li><a href="#competene-digitale">Competențe</a></li>
+          <li><a href="#hoby">Hobby</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Tudor Laurian</h1>
+        <p>Expert în accesibilitate digitală, optimizări și automatizări.</p>
+      </div>
+    </section>
+
+    <main id="main-content" class="grid-container">
+      <section class="content-area">
+        <article id="about-me" class="card">
+          <h2>Despre mine</h2>
+          <p>
+            Sunt absolvent al Facultății IETI din Oradea, specializarea
+            Tehnologia Informației,cu un master în Management în Tehnologia
+            Informației. În prezent, lucrez la APass, unde mă ocup de
+            accesibilitate digitală, optimizări și automatizări. Ca persoană cu
+            dizabilități locomotorii, am o înțelegere profundă a importanței
+            accesibilității, – nu doar ca concept tehnic, ci ca realitate de zi
+            cu zi. Această perspectivă mă motivează să contribui la crearea unui
+            mediu digital inclusiv pentru toți
+          </p>
+        </article>
+
+        <article id="competene-digitale" class="card">
+          <h2>Competențe digitale</h2>
+          <p>
+            Dezvolt automatizări și efectuez testări automate pentru verificarea
+            contrastului dintre culorile iconițelor și butoanelor. Coordonez
+            sesiuni de testare cu utilizatori reali și utilizez instrumente
+            specializate precum Axe pentru evaluarea accesibilității. Alături de
+            Cosmin, realizez testări cu Voice Access și mă ocup de raportarea
+            rezultatelor. Vorbesc limba engleză, ceea ce îmi permite să
+            colaborez eficient în contexte internaționale și să accesez resurse
+            de specialitate.
+          </p>
+        </article>
+
+        <article id="hoby" class="card">
+          <h2>Hobby</h2>
+          <p>
+            Sunt o persoană care iubește echilibrul între socializare și
+            universul digital. În timpul liber, îmi place să mă relaxez
+            plimbându-mă și petrecând timp cu prietenii, dar pasiunea mea
+            adevărată prinde viață în jocurile de tip sandbox. Sunt fascinat de
+            complexitatea din Minecraft, unde îmi petrec orele inventând
+            mecanisme de redstone și construcții detaliate, dar și de eficiența
+            industrială din Satisfactory. Îmi place atât de mult să construiesc
+            și să explorez, încât am decis să împărtășesc aceste aventuri și pe
+            canalul meu de youtube sub numele de
+            <a href="https://www.youtube.com/@ursu9723">Ursu 97</a> unde postez
+            serii de gameplay pentru cei care împărtășesc aceleași pasiuni. Și
+            îmi place să editez videoclipuri/poze.
+          </p>
+        </article>
+      </section>
+
+      <aside class="sidebar">
+        <div class="blog-roll card">
+          <h3>Blog Roll</h3>
+          <ul>
+            <li>
+              <a href="https://web.dev/accessibility/">Web Dev Accessibility</a>
+            </li>
+            <li><a href="https://www.w3.org/WAI/">W3C WAI</a></li>
+            <li>
+              <a href="https://lauriantudor.github.io/Demo-site-accesibil/"
+                >Demo site accesibil/neaccesibil</a
+              >
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <section id="contact" class="contact-section">
+      <h2>Contact</h2>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="nume">Nume complet:</label>
+          <input
+            type="text"
+            id="nume"
+            name="nume"
+            placeholder="Ex: Tudor Laurian"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Adresa de email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="nume@exemplu.com"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="mesaj">Mesajul tău:</label>
+          <textarea
+            id="mesaj"
+            name="mesaj"
+            placeholder="Cu ce te pot ajuta?"
+            rows="5"
+            required
+            aria-required="true"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Trimite Mesaj</button>
+      </form>
+    </section>
+
+    <footer class="main-footer">
+      <div class="footer-content">
+        <span>Urmărește-mă pe social media</span>
+        <nav>
+          <ul class="social-links">
+            <li>
+              <a href="#"
+                ><img
+                  src="asests/images/social media/facebook.png"
+                  alt="Facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="asests/images/social media/instagram.png"
+                  alt="Instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="asests/images/social media/linkedin.png"
+                  alt="Linkedin"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+        <p>Copyright &copy; 2026 Tudor Laurian</p>
+      </div>
+    </footer>
+  </body>
+</html>

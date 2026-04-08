@@ -1,0 +1,226 @@
+/* --- Reset și Variabile --- */
+:root {
+  --bg-color: #f8f9fa;
+  --text-color: #2d3436;
+  --accent-color: #0984e3;
+  --card-bg: #ffffff;
+  --transition: all 0.3s ease-in-out;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  line-height: 1.6;
+}
+/* --- Skip link ---*/
+.skip-link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+
+  background: #0984e3;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 0 0 5px 5px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 2000;
+}
+.skip-link:focus {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: auto;
+  clip: auto;
+  margin: 0;
+  overflow: visible;
+}
+
+/* --- Navigation (Flexbox & Sticky) --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+/* --- Hero Section (Animations & Flexbox) --- */
+.hero {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6c5ce7, #0984e3);
+  color: white;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin: 0;
+  animation: fadeInUp 1s ease-out; /* Animation */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Main Layout (CSS Grid) --- */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2 părți conținut, 1 parte sidebar */
+  gap: 30px;
+  padding: 40px 5%;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  } /* Responsivitate */
+}
+
+/* --- Cards (Transforms & Transitions) --- */
+.card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: scale(1.02); /* Transform */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Contact Form (Flexbox) --- */
+
+.contact-section {
+  padding: 60px 5%;
+  max-width: 800px;
+  background: #dfe6e9;
+  margin: 0 auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column; /* Label-ul deasupra input-ului */
+  align-items: flex-start; /* Aliniere la stânga */
+  gap: 8px;
+}
+
+label {
+  font-weight: 600;
+  color: var(--dark-color);
+  cursor: pointer;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+/* Efect vizual pentru accesibilitate la navigarea cu Tab */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(9, 132, 227, 0.2);
+}
+
+.btn-submit {
+  align-self: flex-start; /* Butonul nu se întinde pe tot rândul */
+  padding: 12px 30px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #0773c5;
+  transform: translateY(-2px); /* Transform */
+}
+
+/* --- Footer (Flexbox) --- */
+.main-footer {
+  background: #2d3436;
+  color: white;
+  padding: 30px 5%;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.social-links img {
+  width: 32px;
+  filter: grayscale(100%) invert(1);
+  transition: var(--transition);
+}
+
+.social-links img:hover {
+  filter: grayscale(0%) invert(0);
+  transform: rotate(360deg); /* Transform: Rotation */
+}
